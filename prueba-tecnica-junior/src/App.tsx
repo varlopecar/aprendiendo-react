@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import getUsers from "./services/users"
-import { User } from "./models/User";
+import UserList from "./components/UserList";
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -12,15 +12,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      <ul>
-        {users.map((user: User) => (
-          <li key={user.id}>
-            {user.name}
-          </li>
-        ))}
-      </ul>
-    </>
+    <div>
+      <UserList userList={users} />
+    </div>
   )
 }
 
