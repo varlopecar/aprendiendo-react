@@ -1,5 +1,5 @@
-import React from 'react'
 import { Movie } from '../models/Movie'
+import './movielist.css'
 
 interface MovieListProps {
     movies: Movie[]
@@ -7,17 +7,21 @@ interface MovieListProps {
 
 const MovieList = ({ movies }: MovieListProps) => {
     return (
-        <div>
+        <ul className='movies-list'>
             {
-                movies.map((movie: Movie) => (
-                    <li key={movie.id}>
-                        <h3>{movie.title}</h3>
-                        <p>{movie.year}</p>
-                        <img src={movie.poster} alt={movie.title} />
-                    </li>
-                ))
+                movies.map((movie: Movie) => {
+                    return (
+                        <li key={movie.id} className='movie'>
+                            <img src={movie.poster} alt={movie.title} />
+                            <div className='movie-info'>
+                                <h3>{movie.title}</h3>
+                                <span>{movie.year}</span>
+                            </div>
+                        </li>
+                    )
+                })
             }
-        </div>
+        </ul>
     )
 }
 

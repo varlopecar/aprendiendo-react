@@ -875,3 +875,11 @@ body > footer {
     text-decoration: underline;
   }
 }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
