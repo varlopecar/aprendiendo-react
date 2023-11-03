@@ -10,7 +10,7 @@ export const getMovies = async (search: string) => {
 
     const movies = data.Search;
 
-    return movies.map((movie: any) => ({
+    return movies.map((movie) => ({
       id: movie.imdbID,
       title: movie.Title,
       year: movie.Year,

@@ -1,8 +1,11 @@
+import { CartIcon } from "./components/Icons"
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <div>
+      <h1 className="text-4xl">Shopping Cart</h1>
+      <CartIcon />
+    </div>
   )
 }
 
