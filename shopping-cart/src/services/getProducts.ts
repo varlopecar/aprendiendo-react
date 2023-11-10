@@ -1,3 +1,5 @@
+import { Product } from "../models/Product";
+
 const BASE_URL = "https://dummyjson.com/products";
 
 export const getProducts = async () => {
@@ -7,7 +9,7 @@ export const getProducts = async () => {
 
     const products = data.products;
 
-    return products.map((product: any) => ({
+    return products.map((product: Product) => ({
       id: product.id,
       title: product.title,
       description: product.description,

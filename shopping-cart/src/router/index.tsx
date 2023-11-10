@@ -9,7 +9,6 @@ export default function Router() {
         {
             path: "/",
             element: <HomePage />,
-            errorElement: <NotFoundPage />,
         },
         {
             path: "/cart",
@@ -18,6 +17,10 @@ export default function Router() {
         {
             path: "/product/:id",
             element: <ProductDetails />,
+        },
+        {
+            path: "*",
+            element: <NotFoundPage />,
         },
     ]);
     
